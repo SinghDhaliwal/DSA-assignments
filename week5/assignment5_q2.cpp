@@ -24,9 +24,14 @@ void ins(N *&h, int v)
 int main()
 {
     N *H = 0;
-    int a[] = {1, 2, 1, 2, 1, 3, 1}, k = 1, c = 0;
-    for (int i = 0; i < 7; ++i)
-        ins(H, a[i]);
+    int x, k, c = 0;
+
+    cout << "Enter list vals (-1 to end): ";
+    while (cin >> x && x != -1)
+        ins(H, x);
+
+    cout << "Enter key: ";
+    cin >> k;
 
     N *p = H, *prv = 0;
     while (p)
